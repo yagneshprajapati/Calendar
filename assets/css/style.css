@@ -1,0 +1,317 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    user-select: none;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.container-fluid {
+    transform-origin: top;
+    position: relative; /* Ermöglicht absolute Positionierung der Kinder bezogen auf diesen Container */
+}
+
+/* Visualisierung des Lochs */
+.container-fluid::before {
+    content: '';
+    position: absolute;
+    top: 0.5cm; /* Position des Lochs unter dem oberen Rand anpassen */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5cm;
+    height: 0.5cm;
+    background-color: #fff; /* Farbe des Lochs */
+    border-radius: 50%; /* Kreisform */
+    box-shadow: 2px 2px 3px rgba(0,0,0,0.5); /* Schatten für das Loch */
+    z-index: 10;
+}
+
+
+.container-fluid {
+    transform-origin: top;
+    position: relative; /* Stellen Sie sicher, dass das .container-fluid Element relativ positioniert ist */
+}
+
+/* Nagel- und Loch-Visualisierung hinzufügen */
+.container-fluid::before {
+    content: '';
+    position: absolute;
+    top: 0.5cm; /* Position anpassen, um das Loch sichtbar unter dem oberen Rand zu platzieren */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5cm;
+    height: 0.5cm;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: -2px -2px 3px rgba(0,0,0,0.5);
+    z-index: 10;
+}
+
+.container-fluid::after {
+    content: '';
+    position: absolute;
+    top: -1cm; /* Position anpassen, sodass es aussieht, als wäre der Nagel oberhalb des Lochs */
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 0.1cm;
+    height: 1cm;
+    background-color: #555;
+    border-radius: 2px;
+    z-index: 5;
+}
+
+.container-fluid::before {
+    content: '';
+    position: absolute;
+    top: -1cm; /* Position des Nagelkopfs über dem Kalender */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.5cm; /* Durchmesser des Nagelkopfs */
+    height: 0.5cm; /* Höhe des Nagelkopfs */
+    background-color: silver; /* Farbe des Nagelkopfs */
+    border-radius: 50%; /* Rundet den Nagelkopf ab */
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.5); /* Schatten für Tiefe */
+    z-index: 15;
+}
+
+.container-fluid::after {
+    content: '';
+    position: absolute;
+    top: -0.75cm; /* Beginn des Nagelschafts, leicht überlappend mit dem Nagelkopf */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.1cm; /* Dicke des Nagels */
+    height: 0.75cm; /* Länge des Nagels */
+    background-color: silver; /* Farbe des Nagels */
+    box-shadow: 1px 1px 3px rgba(0,0,0,0.5); /* Schatten für Tiefe */
+    z-index: 14;
+}
+
+.page {
+    cursor: url('../cursor/hand_point.png'), auto;
+}
+
+.calender-top {
+    background: gold;
+}
+
+.default-cursor {
+    cursor: default;
+}
+
+.calender-top:after {
+    background: linear-gradient(-45deg, #ffffff 14px, #dddddd 15px, #bbbbbb 16px, transparent 20px, transparent 0), linear-gradient(45deg, #ffffff 16px, #dddddd 15px, #bbbbbb 14px, transparent 14px);
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 24px;
+}
+
+.calender-top span {
+    font-weight: 500;
+    font-size: 22px;
+    color: darkslateblue;
+    letter-spacing: 0.1em;
+}
+
+.holiday-name {
+    font-size: 12px !important;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+}
+
+.vertical {
+    transform: rotate(180deg);
+    writing-mode: vertical-lr;
+    text-align: center;
+}
+
+#day-num {
+    font-size: 50px !important;
+}
+
+.img-container {
+    border: 1px solid #8c8c8c;
+}
+
+.img-container img {
+    max-height: 300px;
+    cursor: default;
+    /*pointer-events:none;*/
+}
+
+.neu-shadow {
+    background: linear-gradient(145deg, #FFFFFF, #CED0D4);
+    border-radius: 1%;
+    box-shadow: 6.5px 6.5px 25px #BABBBE, -6.5px -6.5px 25px #FFFFFF;
+}
+
+.calender-container {
+    width: 720px;
+    height: 580px;
+
+}
+
+.pages {
+    width: 720px;
+    height: 520px;
+    z-index: 2;
+}
+
+.fake-div {
+    width: 720px;
+    height: 5px;
+    background: #f8f8f8;
+    border-radius: 0px;
+    border: 1px solid rgba(201, 199, 199, 0.25);
+    cursor: default;
+}
+
+.image-div {
+    height: 280px;
+}
+
+.line-content {
+    width: 260px;
+    opacity: 1;
+    position: absolute;
+    border: 1px solid rgb(140, 140, 140);
+}
+
+.date-content {
+    width: 260px;
+}
+
+.calendar-area {
+    max-width: 240px;
+}
+
+.calendar-area div {
+    color: #808080;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.row-cols-7 > * {
+    flex: 0 0 auto;
+    width: 14.28571%; /* 100% / 7 */
+}
+
+@media (min-width: 576px) {
+    .row-cols-sm-7 > * {
+        flex: 0 0 auto;
+        width: 14.28571%; /* 100% / 7 */
+    }
+}
+
+@media (min-width: 768px) {
+    .row-cols-md-7 > * {
+        flex: 0 0 auto;
+        width: 14.28571%; /* 100% / 7 */
+    }
+}
+
+@media (min-width: 992px) {
+    .row-cols-lg-7 > * {
+        flex: 0 0 auto;
+        width: 14.28571%; /* 100% / 7 */
+    }
+}
+
+@media (min-width: 1200px) {
+    .row-cols-xl-7 > * {
+        flex: 0 0 auto;
+        width: 14.28571%; /* 100% / 7 */
+    }
+}
+
+@media (min-width: 1400px) {
+    .row-cols-xxl-7 > * {
+        flex: 0 0 auto;
+        width: 14.28571%; /* 100% / 7 */
+    }
+}
+/* loch */
+/* .nail-container::before { */
+    /* content: ''; */
+    /* position: absolute; */
+    /* top:0.5cm;  */
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    /* width: 0.6cm; */
+    /* height: 0.6cm; */
+    /* background-color: white; /* Farbe des Nagelkopfs */ */
+    /* border-radius: 50%; /* Rundet den Nagelkopf ab */ */
+    /* box-shadow: -1px -1px 5px rgba(0,0,0,0.9); /* Schatten für Tiefe */ */
+    /* z-index: 14; */
+/* } */
+.hole-container::before {
+    content: '';
+    position: absolute;
+    top:0.6cm; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.6cm;
+    height: 0.6cm;
+    background-color: white; /* Farbe des Nagelkopfs */
+    border-radius: 50%; /* Rundet den Nagelkopf ab */
+    box-shadow: -2px -2px 5px rgba(0,0,0,0.9); /* Schatten für Tiefe */
+    z-index: 14;
+}
+.hole-container::after {
+    content: '';
+    position: absolute;
+    top:0.6cm; 
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0.6cm;
+    height: 0.6cm;
+    background-color: white; /* Farbe des Nagelkopfs */
+    border-radius: 50%; /* Rundet den Nagelkopf ab */
+    box-shadow: -1px -1px 5px rgba(0,0,0,0.9); /* Schatten für Tiefe */
+    z-index: 14;
+}
+/* /* Nagelkopf */ */
+/* .nail-container::before { */
+    /* content: ''; */
+    /* position: absolute; */
+    /* top:0.5cm; /* Position anpassen, um den Nagelkopf oberhalb des Lochs zu platzieren */ */
+    /* left: 50.0%; */
+    /* transform: translateX(-50%) rotate(-5deg) scaleY(0.95); */
+    /* width: 0.9cm; */
+    /* height: 0.9cm; */
+    /* /* background-color: silver; /* Farbe des Nagelkopfs */ */ */
+    /* /* border-radius: 50%; /* Rundet den Nagelkopf ab */ */ */
+	/* /* box-shadow:5px 5px 2px rgba(0,0,0,0.7); /* Schatten für Tiefe */ */ */
+    /* /* z-index: 15; */ */
+
+    /* background: radial-gradient(circle, rgba(255,255,255,0.8) 20%, silver 50%); */
+    /* border-radius: 50%; */
+    /* box-shadow: -3px -3px 5px rgba(0,0,0,0.9); */
+    /* z-index: 15; */
+/* } */
+	/* /*box-shadow: 5px 5px 5px rgba(0,0,0,0.7);  Schatten für Tiefe */  */
+/* /* Nagelkopf */ */
+/* .nail-container::after { */
+    /* content: ''; */
+    /* position: absolute; */
+    /* top:0.5cm; /* Position anpassen, um den Nagelkopf oberhalb des Lochs zu platzieren */ */
+    /* left: 50.0%; */
+    /* transform: translateX(-50%) rotate(-5deg) scaleY(0.95); */
+    /* width: 0.9cm; */
+    /* height: 0.9cm; */
+    /* background-color: silver; /* Farbe des Nagelkopfs */ */
+    /* border-radius: 50%; /* Rundet den Nagelkopf ab */ */
+	/* box-shadow:-5px 5px 2px rgba(0,0,0,0.7); /* Schatten für Tiefe */ */
+    /* z-index: 15; */
+/* } */

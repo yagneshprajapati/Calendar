@@ -1,0 +1,83 @@
+
+
+p {
+    margin: 0 0 3px;
+    line-height: 1;
+    letter-spacing: 1px;
+    pointer-events: none;
+}
+
+.calendar {
+    position: relative;
+    width: 152px;
+    cursor: default;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.calendar::before, .calendar::after {
+    content: "";
+    position: absolute;
+    top: -28px;
+    left: 40px;
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    background: #ddd;
+    z-index: 3;
+}
+.calendar::after {
+    left: initial;
+    right: 40px;
+}
+
+.page {
+    position: relative;
+    background: white;
+    height: 520px;
+}
+
+.page::before {
+    background: linear-gradient(-45deg, #ffffff 14px, #dddddd 15px, #bbbbbb 16px, transparent 20px, transparent 0), linear-gradient(45deg, #ffffff 16px, #dddddd 15px, #bbbbbb 14px, transparent 14px);
+    background-repeat: repeat-x;
+    background-size: 32px 32px;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-24px);
+    width: 100%;
+    height: 24px;
+}
+
+
+.tear {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    transform-origin: top left;
+    box-shadow: 0 0 10px -1px rgba(0, 0, 0, 0.5);
+    pointer-events: none;
+}
+
+@keyframes tear-animation {
+    0% {
+        transform: rotate(0deg);
+        top: 0;
+        opacity: 1;
+    }
+    25% {
+        transform: rotate(9deg);
+        top: 0;
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        top: 6000px;
+    }
+}

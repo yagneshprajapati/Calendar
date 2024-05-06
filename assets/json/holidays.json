@@ -1,0 +1,166 @@
+[
+  {
+    "date": "1-1",
+    "fname": "Neujahr"
+  },
+  {
+    "date": "1-6",
+    "fname": "Heilige Drei Könige"
+  },
+  {
+    "date": "2-14",
+    "fname": "Valentinstag"
+  },
+  {
+    "date": "2-20",
+    "fname": "Rosenmontag"
+  },
+  {
+    "date": "2-25",
+    "fname": "Fastnacht"
+  },
+  {
+    "date": "3-8",
+    "fname": "Internationaler Frauentag"
+  },
+  {
+    "date": "3-17",
+    "fname": "St. Patrick's Day"
+  },
+  {
+    "date": "3-20",
+    "fname": "Frühlingsanfang"
+  },
+  {
+    "date": "4-1",
+    "fname": "April Fools' Day"
+  },
+  {
+    "date": "4-19",
+    "fname": "Karfreitag"
+  },
+  {
+    "date": "4-21",
+    "fname": "Ostersonntag"
+  },
+  {
+    "date": "4-22",
+    "fname": "Ostermontag"
+  },
+  {
+    "date": "5-1",
+    "fname": "Tag der Arbeit"
+  },
+  {
+    "date": "5-5",
+    "fname": "Cinco de Mayo"
+  },
+  {
+    "date": "5-9",
+    "fname": "Tag des Sieges"
+  },
+  {
+    "date": "5-12",
+    "fname": "Muttertag"
+  },
+  {
+    "date": "5-30",
+    "fname": "Christi Himmelfahrt"
+  },
+  {
+    "date": "6-1",
+    "fname": "Kindertag"
+  },
+  {
+    "date": "6-9",
+    "fname": "Pfingstsonntag"
+  },
+  {
+    "date": "6-10",
+    "fname": "Pfingstmontag"
+  },
+  {
+    "date": "6-20",
+    "fname": "Fronleichnam"
+  },
+  {
+    "date": "6-21",
+    "fname": "Sommeranfang"
+  },
+  {
+    "date": "7-4",
+    "fname": "Independence Day"
+  },
+  {
+    "date": "7-14",
+    "fname": "Französischer Nationalfeiertag"
+  },
+  {
+    "date": "8-1",
+    "fname": "Nationalfeiertag der Schweiz"
+  },
+  {
+    "date": "8-15",
+    "fname": "Mariä Himmelfahrt"
+  },
+  {
+    "date": "9-23",
+    "fname": "Herbstanfang"
+  },
+  {
+    "date": "9-29",
+    "fname": "Michaelistag"
+  },
+  {
+    "date": "10-3",
+    "fname": "Tag der Deutschen Einheit"
+  },
+  {
+    "date": "10-6",
+    "fname": "Weltlehrertag"
+  },
+  {
+    "date": "10-31",
+    "fname": "Reformationstag"
+  },
+  {
+    "date": "11-1",
+    "fname": "Allerheiligen"
+  },
+  {
+    "date": "11-2",
+    "fname": "Día de los Muertos"
+  },
+  {
+    "date": "11-11",
+    "fname": "Singles' Day"
+  },
+  {
+    "date": "11-20",
+    "fname": "Buß- und Bettag"
+  },
+  {
+    "date": "11-28",
+    "fname": "Black Friday"
+  },
+  {
+    "date": "12-6",
+    "fname": "Nikolaustag"
+  },
+  {
+    "date": "12-24",
+    "fname": "Heiligabend"
+  },
+  {
+    "date": "12-25",
+    "fname": "Erster Weihnachtstag"
+  },
+  {
+    "date": "12-26",
+    "fname": "Zweiter Weihnachtstag"
+  },
+  {
+    "date": "12-31",
+    "fname": "Silvester"
+  }
+]
